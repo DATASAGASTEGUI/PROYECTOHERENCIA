@@ -5,17 +5,17 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class GuadarDatos {
+public class GuardarDatos {
     
-    public void guadarArchivoCsv(String cadena) {
+    public static void guadarArchivoCsv(String cadena) {
         File f;
         FileWriter fw;
         BufferedWriter bw;
         try {
               f = new File("data/informe.csv");
-              fw = new FileWriter(f);
+              fw = new FileWriter(f,true);
               bw = new BufferedWriter(fw);
-              bw.write(cadena); //GRABAR UNA CADENA EN EL ARCHIVO
+              bw.write(cadena+"\n"); //GRABAR UNA CADENA EN EL ARCHIVO
               bw.flush();
               System.out.println("GRABACION CORRECTA");
         }catch(IOException e) {

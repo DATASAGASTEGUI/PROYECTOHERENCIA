@@ -2,6 +2,7 @@ package principal;
 
 import java.util.List;
 import leerdatos.ObtenerDatos;
+import escribirdatos.GuardarDatos;
 import model.Conserje;
 import model.Trabajador;
 
@@ -30,6 +31,8 @@ public class Principal1 {
         //GUARDAR EL RESULTADO EN UN ARCHIVO
         //Miguel;Parraga;Funcionario;4000.0
         
+        String cadena = nombre+";"+apellido+";"+tipo+";"+maximo;
+        GuardarDatos.guadarArchivoCsv(cadena);
         
     }
 
