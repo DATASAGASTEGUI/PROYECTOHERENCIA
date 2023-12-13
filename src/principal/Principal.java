@@ -1,13 +1,15 @@
 package principal;
 
+import java.util.List;
 import leerdatos.ObtenerDatos;
 import model.Conserje;
 import model.Funcionario;
+import model.Trabajador;
 
 public class Principal {
 
     public static void main(String[] args) {
-
+/*
         Conserje t1 = new Conserje();
         t1.setIdTrabajador(1);
         t1.setNombre("Luis");
@@ -21,9 +23,20 @@ public class Principal {
         System.out.println("Sueldo t1: " + t1.sueldo());
         System.out.println(t2);
         System.out.println("Sueldo t2: " + t2.sueldo());
-        
-        ObtenerDatos.leerArchivoCsv();
+*/
+        List<Trabajador> trabajadores_al = ObtenerDatos.leerArchivoCsv();
 
+        for (Trabajador t : trabajadores_al) {
+            if (t instanceof Conserje) {
+                System.out.println(t.getNombre() + " "
+                        + t.getApellido() + " "
+                        + ((Conserje) t).sueldo());
+            } else {
+                System.out.println(t.getNombre() + " "
+                        + t.getApellido() + " "
+                        + ((Funcionario) t).sueldo());
+            }
+        }
     }
 
 }
