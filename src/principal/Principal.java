@@ -1,5 +1,6 @@
 package principal;
 
+import leerdatos.ObtenerDatos;
 import model.Conserje;
 import model.Funcionario;
 
@@ -20,6 +21,8 @@ public class Principal {
         System.out.println("Sueldo t1: " + t1.sueldo());
         System.out.println(t2);
         System.out.println("Sueldo t2: " + t2.sueldo());
+        
+        ObtenerDatos.leerArchivoCsv();
 
     }
 
