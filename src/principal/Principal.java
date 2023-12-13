@@ -3,7 +3,6 @@ package principal;
 import java.util.List;
 import leerdatos.ObtenerDatos;
 import model.Conserje;
-import model.Funcionario;
 import model.Trabajador;
 
 public class Principal {
@@ -27,14 +26,16 @@ public class Principal {
         List<Trabajador> trabajadores_al = ObtenerDatos.leerArchivoCsv();
 
         for (Trabajador t : trabajadores_al) {
+            
             if (t instanceof Conserje) {
                 System.out.println(t.getNombre() + " "
                         + t.getApellido() + " "
-                        + ((Conserje) t).sueldo());
+                        + t.sueldo());
             } else {
                 System.out.println(t.getNombre() + " "
                         + t.getApellido() + " "
-                        + ((Funcionario) t).sueldo());
+                        + t.sueldo());
+                
             }
         }
     }

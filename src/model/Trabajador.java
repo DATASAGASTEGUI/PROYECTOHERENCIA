@@ -1,6 +1,6 @@
 package model;
 
-public class Trabajador {
+public abstract class Trabajador {
 
     private int idTrabajador;
     private String nombre;
@@ -63,4 +63,6 @@ public class Trabajador {
     public String toString() {
         return "Trabajador{" + "idTrabajador=" + idTrabajador + ", nombre=" + nombre + ", apellido=" + apellido + ", antiguedad=" + antiguedad + ", horasTrabajadas=" + horasTrabajadas + '}';
     }
+    
+    public abstract double sueldo();
 }
