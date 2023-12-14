@@ -25,8 +25,8 @@ public class Principal1 {
             }
         }
         System.out.println("Nombre       : " + nombre);
-        System.out.println("Nombre       : " + apellido);
-        System.out.println("Nombre       : " + tipo);
+        System.out.println("Apellido     : " + apellido);
+        System.out.println("Tipo         : " + tipo);
         System.out.println("Sueldo Maximo: " + maximo);
         //GUARDAR EL RESULTADO EN UN ARCHIVO
         //Miguel;Parraga;Funcionario;4000.0
