@@ -65,4 +65,12 @@ public abstract class Trabajador {
     }
     
     public abstract double sueldo();
+    
+    public String cadenaCsv() {
+        return this.idTrabajador + ";" +
+               this.nombre + ";" +
+               this.apellido + ";" +
+               this.antiguedad + ";" +
+               this.horasTrabajadas;
+    }
 }
